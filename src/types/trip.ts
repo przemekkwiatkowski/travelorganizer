@@ -80,4 +80,5 @@ export interface TripData {
     description?: string;
   };
   days: TripDay[];
+  globalBonusActivities?: BonusActivity[];
 }

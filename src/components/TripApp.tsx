@@ -9,9 +9,10 @@ import { HorizontalTimeline } from "./HorizontalTimeline";
 import { TimelineDetailed } from "./TimelineDetailed";
 import { VerticalTimeline } from "./VerticalTimeline";
 import { BoardView } from "./BoardView";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { t } from "@/lib/i18n";
+import { categoryConfig } from "@/lib/categories";
 
 interface TripAppProps {
   initialData: TripData;
@@ -126,6 +127,67 @@ export function TripApp({ initialData }: TripAppProps) {
 
         {viewMode === "board" && <BoardView days={data.days} />}
       </main>
+
+      {data.globalBonusActivities && data.globalBonusActivities.length > 0 && (
+        <section className="px-4 py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-dashed border-amber-300 dark:border-amber-700/50 bg-amber-50/50 dark:bg-amber-950/20 p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <Star className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+              <div>
+                <h2 className="text-base font-bold text-amber-800 dark:text-amber-300">
+                  {t.global.bonusTitle}
+                </h2>
+                <p className="text-xs text-amber-600/70 dark:text-amber-400/60">
+                  {t.global.bonusSubtitle}
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {data.globalBonusActivities.map((bonus) => {
+                const cat = categoryConfig[bonus.category];
+                const Icon = cat.icon;
+                return (
+                  <div
+                    key={bonus.id}
+                    className="flex items-start gap-2.5 rounded-xl bg-white/60 dark:bg-gray-800/40 p-3"
+                  >
+                    <div
+                      className={cn(
+                        "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg",
+                        cat.bgLight,
+                        cat.bgDark
+                      )}
+                    >
+                      <Icon className={cn("h-4 w-4", cat.textColor)} />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-medium text-sm text-gray-800 dark:text-gray-200">
+                        {bonus.title}
+                      </p>
+                      {bonus.description && (
+                        <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                          {bonus.description}
+                        </p>
+                      )}
+                      {bonus.location?.googleMapsUrl && (
+                        <a
+                          href={bonus.location.googleMapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-1 inline-flex items-center gap-1 text-xs text-blue-500 hover:text-blue-600 cursor-pointer"
+                        >
+                          <MapPin className="h-3 w-3" />
+                          {t.map.viewOnMap}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       <footer className="border-t border-gray-200 dark:border-gray-800 px-4 py-6 text-center text-sm text-gray-400 dark:text-gray-500">
         {t.app.name} &middot; {t.app.editHint}{" "}

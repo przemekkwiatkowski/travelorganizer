@@ -1,74 +1,66 @@
 {
   "trip": {
-    "name": "New York City Adventure",
-    "destination": "New York City",
-    "country": "United States",
-    "startDate": "2026-05-15",
-    "endDate": "2026-05-20",
+    "name": "Nowy Jork 2026",
+    "destination": "Nowy Jork",
+    "country": "USA",
+    "startDate": "2026-04-30",
+    "endDate": "2026-05-09",
     "homeTimezone": "Europe/Warsaw",
     "destinationTimezone": "America/New_York",
     "coverPhoto": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1200",
-    "travelers": ["Przemek", "Partner"],
-    "description": "6-day adventure exploring the best of Manhattan, Brooklyn, and beyond"
+    "travelers": ["Przemek"],
+    "description": "10 dni w Nowym Jorku — Manhattan, Brooklyn, Broadway i więcej"
   },
   "days": [
     {
-      "date": "2026-05-15",
-      "label": "Day 1 - Arrival & Times Square",
+      "date": "2026-04-30",
+      "label": "Dzień 1 - Przylot i Times Square",
       "timezone": "America/New_York",
       "timezoneOffset": "UTC-4",
       "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "checkIn": "15:00",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York",
-        "confirmationCode": "NYC2026-001"
+        "name": "Club Quarters Hotel",
+        "checkIn": "20:00",
+        "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
       },
       "events": [
         {
           "id": "d1e1",
-          "title": "Flight Arrival at JFK",
+          "title": "Wylot z Polski",
           "category": "transport",
-          "startTime": "12:30",
-          "endTime": "13:00",
-          "description": "LOT Polish Airlines LO25 from Warsaw. Terminal 1.",
+          "startTime": "10:00",
+          "description": "Czas polski (PL). Lot do Nowego Jorku.",
+          "notes": "Godzina polska — 10:00 PL"
+        },
+        {
+          "id": "d1e2",
+          "title": "Przylot do Nowego Jorku (JFK)",
+          "category": "transport",
+          "startTime": "16:35",
+          "description": "Lądowanie na JFK. Różnica czasowa: -6h od Polski.",
           "location": {
             "name": "JFK International Airport",
             "address": "Queens, NY 11430",
             "googleMapsUrl": "https://maps.google.com/?q=JFK+Airport"
           },
-          "notes": "Remember: US time is 6h behind Poland (UTC-4 vs UTC+2)"
-        },
-        {
-          "id": "d1e2",
-          "title": "AirTrain + Subway to Manhattan",
-          "category": "transport",
-          "startTime": "13:30",
-          "endTime": "14:45",
-          "description": "AirTrain to Jamaica Station, then E train to Lexington Ave/53rd St",
-          "cost": { "amount": 10.75, "currency": "USD" },
-          "notes": "Buy MetroCard at the station or use OMNY contactless"
+          "notes": "16:35 czasu nowojorskiego (22:35 PL)"
         },
         {
           "id": "d1e3",
-          "title": "Hotel Check-in",
+          "title": "Zameldowanie w hotelu",
           "category": "accommodation",
-          "startTime": "15:00",
-          "endTime": "15:30",
+          "startTime": "20:00",
+          "endTime": "22:00",
           "location": {
-            "name": "The Pod 51 Hotel",
-            "address": "230 E 51st St, New York, NY 10022",
-            "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
+            "name": "Club Quarters Hotel",
+            "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
           }
         },
         {
           "id": "d1e4",
-          "title": "Times Square Walk",
+          "title": "Times Square",
           "category": "sightseeing",
-          "startTime": "16:00",
-          "endTime": "17:30",
-          "description": "First taste of NYC - walk through the iconic Times Square",
+          "isFlexible": true,
+          "description": "Pierwszy spacer po Times Square — wieczorne światła i atmosfera NYC",
           "photo": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600",
           "location": {
             "name": "Times Square",
@@ -77,481 +69,54 @@
             "lng": -73.9855,
             "googleMapsUrl": "https://maps.google.com/?q=Times+Square+New+York"
           }
-        },
-        {
-          "id": "d1e5",
-          "title": "Dinner at Joe's Pizza",
-          "category": "food",
-          "startTime": "18:00",
-          "endTime": "19:00",
-          "description": "Classic NYC thin crust pizza - a must try!",
-          "photo": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600",
-          "location": {
-            "name": "Joe's Pizza",
-            "address": "7 Carmine St, New York, NY 10014",
-            "googleMapsUrl": "https://maps.google.com/?q=Joe's+Pizza+Carmine+St+New+York"
-          },
-          "cost": { "amount": 25, "currency": "USD" }
-        },
-        {
-          "id": "d1e6",
-          "title": "Broadway Show Area Walk",
-          "category": "entertainment",
-          "startTime": "19:30",
-          "endTime": "21:00",
-          "isFlexible": true,
-          "description": "Evening stroll through the Theater District, check for last-minute TKTS tickets",
-          "location": {
-            "name": "Theater District",
-            "address": "Broadway, Manhattan",
-            "googleMapsUrl": "https://maps.google.com/?q=Theater+District+Broadway+New+York"
-          }
         }
       ],
-      "bonusActivities": [
-        {
-          "id": "d1b1",
-          "title": "Madame Tussauds",
-          "category": "entertainment",
-          "description": "Wax museum near Times Square - if we have energy after the flight",
-          "location": {
-            "name": "Madame Tussauds New York",
-            "googleMapsUrl": "https://maps.google.com/?q=Madame+Tussauds+New+York"
-          }
-        }
-      ],
-      "notes": "Take it easy today - jet lag will hit! Stay hydrated."
+      "notes": "Jet lag! Różnica -6h. Nie planować za dużo na pierwszy wieczór."
     },
     {
-      "date": "2026-05-16",
-      "label": "Day 2 - Statue of Liberty & Lower Manhattan",
+      "date": "2026-05-01",
+      "label": "Dzień 2 - Chelsea, High Line i West Village",
       "timezone": "America/New_York",
       "timezoneOffset": "UTC-4",
       "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
+        "name": "Club Quarters Hotel",
+        "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
       },
       "events": [
         {
           "id": "d2e1",
-          "title": "Breakfast at Russ & Daughters Cafe",
-          "category": "food",
-          "startTime": "08:00",
-          "endTime": "09:00",
-          "description": "Iconic NYC bagels and smoked fish since 1914",
-          "photo": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600",
+          "title": "Hudson Yards",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Nowoczesna dzielnica z The Vessel i widokami",
+          "photo": "https://images.unsplash.com/photo-1558376476-4943d2b6bb15?w=600",
           "location": {
-            "name": "Russ & Daughters Cafe",
-            "address": "127 Orchard St, New York, NY 10002",
-            "googleMapsUrl": "https://maps.google.com/?q=Russ+and+Daughters+Cafe+Orchard+St"
-          },
-          "cost": { "amount": 35, "currency": "USD" }
+            "name": "Hudson Yards",
+            "address": "20 Hudson Yards, New York",
+            "lat": 40.7536,
+            "lng": -74.0023,
+            "googleMapsUrl": "https://maps.google.com/?q=Hudson+Yards+New+York"
+          }
         },
         {
           "id": "d2e2",
-          "title": "Statue of Liberty & Ellis Island",
+          "title": "Vessel",
           "category": "sightseeing",
-          "startTime": "10:00",
-          "endTime": "14:00",
-          "description": "Ferry from Battery Park. Pedestal access tickets pre-booked.",
-          "photo": "https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?w=600",
+          "isFlexible": true,
+          "description": "Ikoniczny budynek-rzeźba w Hudson Yards",
+          "photo": "https://images.unsplash.com/photo-1565347878054-a4b8baf1d46a?w=600",
           "location": {
-            "name": "Statue of Liberty",
-            "address": "Liberty Island, New York",
-            "lat": 40.6892,
-            "lng": -74.0445,
-            "googleMapsUrl": "https://maps.google.com/?q=Statue+of+Liberty"
-          },
-          "cost": { "amount": 24, "currency": "USD" },
-          "notes": "Tickets pre-booked! Confirmation in email. Arrive 30min early."
+            "name": "Vessel",
+            "address": "20 Hudson Yards, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Vessel+Hudson+Yards"
+          }
         },
         {
           "id": "d2e3",
-          "title": "Lunch at Shake Shack",
-          "category": "food",
-          "startTime": "14:30",
-          "endTime": "15:15",
-          "description": "The original Shake Shack in Madison Square Park",
-          "photo": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
-          "location": {
-            "name": "Shake Shack - Madison Square Park",
-            "address": "Madison Square Park, New York",
-            "googleMapsUrl": "https://maps.google.com/?q=Shake+Shack+Madison+Square+Park"
-          },
-          "cost": { "amount": 30, "currency": "USD" }
-        },
-        {
-          "id": "d2e4",
-          "title": "9/11 Memorial & Museum",
-          "category": "museum",
-          "startTime": "15:30",
-          "endTime": "18:00",
-          "description": "Pay respects at the memorial pools and explore the museum",
-          "photo": "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600",
-          "location": {
-            "name": "9/11 Memorial & Museum",
-            "address": "180 Greenwich St, New York, NY 10007",
-            "lat": 40.7115,
-            "lng": -74.0134,
-            "googleMapsUrl": "https://maps.google.com/?q=9/11+Memorial+Museum+New+York"
-          },
-          "cost": { "amount": 33, "currency": "USD" }
-        },
-        {
-          "id": "d2e5",
-          "title": "Wall Street & Charging Bull",
-          "category": "sightseeing",
-          "startTime": "18:15",
-          "endTime": "19:00",
-          "description": "Walk through the Financial District, see the Charging Bull and NYSE",
-          "photo": "https://images.unsplash.com/photo-1534488972407-834d59099b5f?w=600",
-          "location": {
-            "name": "Charging Bull",
-            "address": "Broadway, New York, NY 10004",
-            "googleMapsUrl": "https://maps.google.com/?q=Charging+Bull+Wall+Street"
-          }
-        },
-        {
-          "id": "d2e6",
-          "title": "Dinner in Little Italy",
-          "category": "food",
-          "startTime": "19:30",
-          "endTime": "21:00",
+          "title": "High Line",
+          "category": "walk",
           "isFlexible": true,
-          "description": "Pick a restaurant on Mulberry Street",
-          "location": {
-            "name": "Little Italy",
-            "address": "Mulberry St, Manhattan",
-            "googleMapsUrl": "https://maps.google.com/?q=Little+Italy+Mulberry+Street+New+York"
-          },
-          "cost": { "amount": 60, "currency": "USD" }
-        }
-      ],
-      "bonusActivities": [
-        {
-          "id": "d2b1",
-          "title": "Brooklyn Bridge Walk",
-          "category": "walk",
-          "description": "Walk across the Brooklyn Bridge at sunset if time permits",
-          "photo": "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=600",
-          "location": {
-            "name": "Brooklyn Bridge",
-            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Bridge+New+York"
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-05-17",
-      "label": "Day 3 - Central Park & Museums",
-      "timezone": "America/New_York",
-      "timezoneOffset": "UTC-4",
-      "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
-      },
-      "events": [
-        {
-          "id": "d3e1",
-          "title": "Central Park Morning Walk",
-          "category": "walk",
-          "startTime": "08:00",
-          "endTime": "10:00",
-          "description": "Bethesda Fountain, Bow Bridge, Strawberry Fields, The Mall",
-          "photo": "https://images.unsplash.com/photo-1534801022022-6e319a11f249?w=600",
-          "location": {
-            "name": "Central Park",
-            "address": "Central Park, Manhattan",
-            "lat": 40.7829,
-            "lng": -73.9654,
-            "googleMapsUrl": "https://maps.google.com/?q=Central+Park+New+York"
-          }
-        },
-        {
-          "id": "d3e2",
-          "title": "The Metropolitan Museum of Art",
-          "category": "museum",
-          "startTime": "10:30",
-          "endTime": "13:30",
-          "description": "One of the world's greatest art museums. Focus on Egyptian wing & European paintings",
-          "photo": "https://images.unsplash.com/photo-1570739820858-37dd8a36cdb2?w=600",
-          "location": {
-            "name": "The Metropolitan Museum of Art",
-            "address": "1000 5th Ave, New York, NY 10028",
-            "lat": 40.7794,
-            "lng": -73.9632,
-            "googleMapsUrl": "https://maps.google.com/?q=Metropolitan+Museum+of+Art+New+York"
-          },
-          "cost": { "amount": 30, "currency": "USD" }
-        },
-        {
-          "id": "d3e3",
-          "title": "Lunch at The Smith",
-          "category": "food",
-          "startTime": "14:00",
-          "endTime": "15:00",
-          "description": "American brasserie near the museum",
-          "location": {
-            "name": "The Smith - East Village",
-            "address": "55 3rd Ave, New York, NY 10003",
-            "googleMapsUrl": "https://maps.google.com/?q=The+Smith+East+Village+New+York"
-          },
-          "cost": { "amount": 45, "currency": "USD" }
-        },
-        {
-          "id": "d3e4",
-          "title": "Top of the Rock Observation Deck",
-          "category": "sightseeing",
-          "startTime": "16:00",
-          "endTime": "17:30",
-          "description": "Amazing panoramic views of Manhattan, including Central Park and Empire State Building",
-          "photo": "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?w=600",
-          "location": {
-            "name": "Top of the Rock",
-            "address": "30 Rockefeller Plaza, New York, NY 10112",
-            "lat": 40.7593,
-            "lng": -73.9794,
-            "googleMapsUrl": "https://maps.google.com/?q=Top+of+the+Rock+New+York"
-          },
-          "cost": { "amount": 43, "currency": "USD" }
-        },
-        {
-          "id": "d3e5",
-          "title": "5th Avenue Shopping",
-          "category": "shopping",
-          "startTime": "17:45",
-          "endTime": "19:00",
-          "isFlexible": true,
-          "description": "Window shopping along 5th Avenue - Saks, Tiffany's, Apple Store",
-          "location": {
-            "name": "5th Avenue",
-            "address": "5th Ave, Manhattan",
-            "googleMapsUrl": "https://maps.google.com/?q=5th+Avenue+Shopping+New+York"
-          }
-        },
-        {
-          "id": "d3e6",
-          "title": "Dinner at Katz's Delicatessen",
-          "category": "food",
-          "startTime": "19:30",
-          "endTime": "20:30",
-          "description": "Legendary pastrami sandwiches since 1888. 'I'll have what she's having!'",
-          "photo": "https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600",
-          "location": {
-            "name": "Katz's Delicatessen",
-            "address": "205 E Houston St, New York, NY 10002",
-            "googleMapsUrl": "https://maps.google.com/?q=Katz's+Delicatessen+New+York"
-          },
-          "cost": { "amount": 35, "currency": "USD" }
-        }
-      ],
-      "bonusActivities": [
-        {
-          "id": "d3b1",
-          "title": "American Museum of Natural History",
-          "category": "museum",
-          "description": "If we finish the Met early",
-          "location": {
-            "name": "American Museum of Natural History",
-            "googleMapsUrl": "https://maps.google.com/?q=American+Museum+Natural+History+New+York"
-          }
-        },
-        {
-          "id": "d3b2",
-          "title": "Rooftop Bar at 230 Fifth",
-          "category": "entertainment",
-          "description": "Rooftop drinks with Empire State Building views",
-          "photo": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600",
-          "location": {
-            "name": "230 Fifth Rooftop Bar",
-            "googleMapsUrl": "https://maps.google.com/?q=230+Fifth+Rooftop+Bar+New+York"
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-05-18",
-      "label": "Day 4 - Brooklyn Day",
-      "timezone": "America/New_York",
-      "timezoneOffset": "UTC-4",
-      "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
-      },
-      "events": [
-        {
-          "id": "d4e1",
-          "title": "Brooklyn Bridge Walk",
-          "category": "walk",
-          "startTime": "08:30",
-          "endTime": "09:30",
-          "description": "Morning walk across the iconic Brooklyn Bridge",
-          "photo": "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=600",
-          "location": {
-            "name": "Brooklyn Bridge",
-            "address": "Brooklyn Bridge, New York",
-            "lat": 40.7061,
-            "lng": -73.9969,
-            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Bridge+New+York"
-          }
-        },
-        {
-          "id": "d4e2",
-          "title": "DUMBO Exploration",
-          "category": "sightseeing",
-          "startTime": "09:30",
-          "endTime": "11:00",
-          "description": "Instagram-famous Manhattan Bridge view, cobblestone streets, Jane's Carousel",
-          "photo": "https://images.unsplash.com/photo-1555424681-b0ecf4fe19a5?w=600",
-          "location": {
-            "name": "DUMBO",
-            "address": "DUMBO, Brooklyn",
-            "googleMapsUrl": "https://maps.google.com/?q=DUMBO+Brooklyn+Manhattan+Bridge+View"
-          }
-        },
-        {
-          "id": "d4e3",
-          "title": "Brunch at Juliana's Pizza",
-          "category": "food",
-          "startTime": "11:15",
-          "endTime": "12:15",
-          "description": "Often rated the best pizza in NYC - coal-fired oven pies",
-          "photo": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600",
-          "location": {
-            "name": "Juliana's Pizza",
-            "address": "19 Old Fulton St, Brooklyn, NY 11201",
-            "googleMapsUrl": "https://maps.google.com/?q=Juliana's+Pizza+Brooklyn"
-          },
-          "cost": { "amount": 30, "currency": "USD" }
-        },
-        {
-          "id": "d4e4",
-          "title": "Brooklyn Flea Market",
-          "category": "shopping",
-          "startTime": "12:30",
-          "endTime": "14:00",
-          "isFlexible": true,
-          "description": "Vintage finds, local artisans, and street food",
-          "location": {
-            "name": "Brooklyn Flea",
-            "address": "80 Pearl St, Brooklyn",
-            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Flea+Market"
-          }
-        },
-        {
-          "id": "d4e5",
-          "title": "Williamsburg Street Art Tour",
-          "category": "sightseeing",
-          "startTime": "14:30",
-          "endTime": "16:00",
-          "description": "Self-guided tour of murals and graffiti in Williamsburg",
-          "photo": "https://images.unsplash.com/photo-1569880153113-76e33fc52b5f?w=600",
-          "location": {
-            "name": "Williamsburg",
-            "address": "Williamsburg, Brooklyn",
-            "googleMapsUrl": "https://maps.google.com/?q=Williamsburg+Brooklyn+Street+Art"
-          }
-        },
-        {
-          "id": "d4e6",
-          "title": "Smorgasburg Food Market",
-          "category": "food",
-          "startTime": "16:30",
-          "endTime": "18:00",
-          "description": "NYC's largest open-air food market with 100+ vendors",
-          "photo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600",
-          "location": {
-            "name": "Smorgasburg",
-            "address": "East River State Park, Brooklyn",
-            "googleMapsUrl": "https://maps.google.com/?q=Smorgasburg+Brooklyn"
-          },
-          "cost": { "amount": 40, "currency": "USD" }
-        },
-        {
-          "id": "d4e7",
-          "title": "Brooklyn Heights Promenade Sunset",
-          "category": "photo-spot",
-          "startTime": "19:00",
-          "endTime": "20:00",
-          "description": "Stunning views of Manhattan skyline at golden hour",
-          "photo": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600",
-          "location": {
-            "name": "Brooklyn Heights Promenade",
-            "address": "Brooklyn Heights Promenade, Brooklyn",
-            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Heights+Promenade"
-          }
-        }
-      ],
-      "bonusActivities": [
-        {
-          "id": "d4b1",
-          "title": "Brooklyn Brewery Tour",
-          "category": "entertainment",
-          "description": "Craft beer tasting at the famous Brooklyn Brewery",
-          "location": {
-            "name": "Brooklyn Brewery",
-            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Brewery"
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-05-19",
-      "label": "Day 5 - Empire State & Chelsea",
-      "timezone": "America/New_York",
-      "timezoneOffset": "UTC-4",
-      "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
-      },
-      "events": [
-        {
-          "id": "d5e1",
-          "title": "Empire State Building - Sunrise Ticket",
-          "category": "sightseeing",
-          "startTime": "07:00",
-          "endTime": "08:30",
-          "description": "Early morning visit for the best views and fewest crowds. 86th floor observation deck.",
-          "photo": "https://images.unsplash.com/photo-1555109307-f7d9da25c244?w=600",
-          "location": {
-            "name": "Empire State Building",
-            "address": "20 W 34th St, New York, NY 10001",
-            "lat": 40.7484,
-            "lng": -73.9857,
-            "googleMapsUrl": "https://maps.google.com/?q=Empire+State+Building"
-          },
-          "cost": { "amount": 44, "currency": "USD" }
-        },
-        {
-          "id": "d5e2",
-          "title": "Chelsea Market Breakfast",
-          "category": "food",
-          "startTime": "09:30",
-          "endTime": "10:30",
-          "description": "Food hall with amazing variety - try Los Tacos No.1",
-          "photo": "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600",
-          "location": {
-            "name": "Chelsea Market",
-            "address": "75 9th Ave, New York, NY 10011",
-            "googleMapsUrl": "https://maps.google.com/?q=Chelsea+Market+New+York"
-          },
-          "cost": { "amount": 25, "currency": "USD" }
-        },
-        {
-          "id": "d5e3",
-          "title": "The High Line",
-          "category": "walk",
-          "startTime": "10:45",
-          "endTime": "12:30",
-          "description": "Elevated park built on former rail tracks. Walk from Gansevoort to Hudson Yards.",
+          "description": "Spacer po podwyższonym parku na dawnych torach kolejowych. Z Hudson Yards na południe.",
           "photo": "https://images.unsplash.com/photo-1567878819560-f6e40789e5d1?w=600",
           "location": {
             "name": "The High Line",
@@ -562,113 +127,149 @@
           }
         },
         {
-          "id": "d5e4",
-          "title": "Hudson Yards & The Vessel",
+          "id": "d2e4",
+          "title": "Little Island",
           "category": "sightseeing",
-          "startTime": "12:30",
-          "endTime": "13:30",
-          "description": "Modern development at the end of the High Line. The Vessel is currently closed for climbing but great for photos.",
-          "photo": "https://images.unsplash.com/photo-1558376476-4943d2b6bb15?w=600",
-          "location": {
-            "name": "Hudson Yards",
-            "address": "20 Hudson Yards, New York",
-            "googleMapsUrl": "https://maps.google.com/?q=Hudson+Yards+New+York"
-          }
-        },
-        {
-          "id": "d5e5",
-          "title": "Lunch at Eataly",
-          "category": "food",
-          "startTime": "13:45",
-          "endTime": "14:45",
-          "description": "Italian marketplace with multiple restaurants",
-          "location": {
-            "name": "Eataly NYC Flatiron",
-            "address": "200 5th Ave, New York, NY 10010",
-            "googleMapsUrl": "https://maps.google.com/?q=Eataly+NYC+Flatiron"
-          },
-          "cost": { "amount": 40, "currency": "USD" }
-        },
-        {
-          "id": "d5e6",
-          "title": "SoHo Shopping & Gallery Walk",
-          "category": "shopping",
-          "startTime": "15:30",
-          "endTime": "17:30",
           "isFlexible": true,
-          "description": "Cast-iron architecture, boutique shops, and art galleries",
-          "photo": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600",
+          "description": "Pływająca wyspa-park na rzece Hudson",
+          "photo": "https://images.unsplash.com/photo-1622645633667-6988c143b0a2?w=600",
           "location": {
-            "name": "SoHo",
-            "address": "SoHo, Manhattan",
-            "googleMapsUrl": "https://maps.google.com/?q=SoHo+Manhattan+New+York"
+            "name": "Little Island",
+            "address": "Pier 55, Hudson River Park",
+            "googleMapsUrl": "https://maps.google.com/?q=Little+Island+NYC"
           }
         },
         {
-          "id": "d5e7",
-          "title": "Broadway Show - The Lion King",
-          "category": "entertainment",
-          "startTime": "19:00",
-          "endTime": "21:30",
-          "description": "Pre-booked tickets for the legendary Broadway musical",
-          "photo": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600",
+          "id": "d2e5",
+          "title": "Chelsea Market",
+          "category": "food",
+          "isFlexible": true,
+          "description": "Food hall z mnóstwem jedzenia — Los Tacos No.1, lobster rolls, i więcej",
+          "photo": "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600",
           "location": {
-            "name": "Minskoff Theatre",
-            "address": "200 W 45th St, New York, NY 10036",
-            "googleMapsUrl": "https://maps.google.com/?q=Minskoff+Theatre+New+York"
-          },
-          "cost": { "amount": 180, "currency": "USD" },
-          "notes": "E-tickets in email. Arrive 30min early."
+            "name": "Chelsea Market",
+            "address": "75 9th Ave, New York, NY 10011",
+            "googleMapsUrl": "https://maps.google.com/?q=Chelsea+Market+New+York"
+          }
+        },
+        {
+          "id": "d2e6",
+          "title": "West Village",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Spacer po urokliwych uliczkach West Village — klimat serialowy NYC",
+          "location": {
+            "name": "West Village",
+            "address": "West Village, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=West+Village+Manhattan"
+          }
+        },
+        {
+          "id": "d2e7",
+          "title": "66 Perry Street",
+          "category": "photo-spot",
+          "isFlexible": true,
+          "description": "Budynek znany z serialu 'Seks w wielkim mieście' — mieszkanie Carrie Bradshaw",
+          "location": {
+            "name": "66 Perry Street",
+            "address": "66 Perry St, New York, NY 10014",
+            "googleMapsUrl": "https://maps.google.com/?q=66+Perry+Street+New+York"
+          }
+        },
+        {
+          "id": "d2e8",
+          "title": "Washington Square Park",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Ikoniczny park z łukiem triumfalnym — serce Greenwich Village",
+          "photo": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=600",
+          "location": {
+            "name": "Washington Square Park",
+            "address": "Washington Square, New York",
+            "lat": 40.7308,
+            "lng": -73.9973,
+            "googleMapsUrl": "https://maps.google.com/?q=Washington+Square+Park+New+York"
+          }
         }
       ],
       "bonusActivities": [
         {
-          "id": "d5b1",
-          "title": "Whitney Museum of American Art",
-          "category": "museum",
-          "description": "Modern and contemporary American art, near the High Line",
+          "id": "d2b1",
+          "title": "Ghostbusters HQ",
+          "category": "photo-spot",
+          "description": "Hook & Ladder 8 — remiza strażacka znana z Pogromców Duchów",
           "location": {
-            "name": "Whitney Museum",
-            "googleMapsUrl": "https://maps.google.com/?q=Whitney+Museum+New+York"
+            "name": "Hook & Ladder 8",
+            "address": "14 N Moore St, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Hook+and+Ladder+8+New+York"
+          }
+        },
+        {
+          "id": "d2b2",
+          "title": "Flatiron Building",
+          "category": "sightseeing",
+          "description": "Ikoniczny trójkątny budynek z 1902 roku",
+          "location": {
+            "name": "Flatiron Building",
+            "address": "175 5th Ave, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Flatiron+Building+New+York"
+          }
+        },
+        {
+          "id": "d2b3",
+          "title": "Harry Potter Store",
+          "category": "shopping",
+          "description": "Największy sklep Harry'ego Pottera na świecie",
+          "location": {
+            "name": "Harry Potter New York",
+            "address": "935 Broadway, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Harry+Potter+Store+New+York"
+          }
+        },
+        {
+          "id": "d2b4",
+          "title": "Madison Square Garden",
+          "category": "sightseeing",
+          "description": "Legendarna arena sportowa — zobaczyć z zewnątrz",
+          "location": {
+            "name": "Madison Square Garden",
+            "address": "4 Pennsylvania Plaza, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Madison+Square+Garden"
           }
         }
       ]
     },
     {
-      "date": "2026-05-20",
-      "label": "Day 6 - Last Day & Departure",
+      "date": "2026-05-02",
+      "label": "Dzień 3 - Midtown i SUMMIT One Vanderbilt",
       "timezone": "America/New_York",
       "timezoneOffset": "UTC-4",
       "accommodation": {
-        "name": "The Pod 51 Hotel",
-        "address": "230 E 51st St, New York, NY 10022",
-        "checkOut": "11:00",
-        "photo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600",
-        "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
+        "name": "Club Quarters Hotel",
+        "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
       },
       "events": [
         {
-          "id": "d6e1",
-          "title": "Breakfast at Levain Bakery",
-          "category": "food",
-          "startTime": "08:00",
-          "endTime": "08:45",
-          "description": "Famous giant chocolate chip cookies and pastries",
-          "photo": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600",
+          "id": "d3e1",
+          "title": "NY Public Library",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Piękny budynek w stylu Beaux-Arts — wejście darmowe",
+          "photo": "https://images.unsplash.com/photo-1568667256549-094345857637?w=600",
           "location": {
-            "name": "Levain Bakery",
-            "address": "167 W 74th St, New York, NY 10023",
-            "googleMapsUrl": "https://maps.google.com/?q=Levain+Bakery+New+York"
-          },
-          "cost": { "amount": 15, "currency": "USD" }
+            "name": "New York Public Library",
+            "address": "476 5th Ave, New York, NY 10018",
+            "lat": 40.7532,
+            "lng": -73.9822,
+            "googleMapsUrl": "https://maps.google.com/?q=New+York+Public+Library"
+          }
         },
         {
-          "id": "d6e2",
+          "id": "d3e2",
           "title": "Grand Central Terminal",
           "category": "sightseeing",
-          "startTime": "09:30",
-          "endTime": "10:15",
-          "description": "Quick visit to the stunning Beaux-Arts terminal. Don't miss the ceiling constellation mural.",
+          "isFlexible": true,
+          "description": "Zabytkowy dworzec z konstelacjami na suficie",
           "photo": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600",
           "location": {
             "name": "Grand Central Terminal",
@@ -679,78 +280,683 @@
           }
         },
         {
-          "id": "d6e3",
-          "title": "Hotel Check-out & Luggage Storage",
-          "category": "accommodation",
-          "startTime": "10:30",
-          "endTime": "11:00",
+          "id": "d3e3",
+          "title": "Chrysler Building",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Art Deco klasyk — najlepiej podziwiać z zewnątrz",
           "location": {
-            "name": "The Pod 51 Hotel",
-            "address": "230 E 51st St, New York, NY 10022",
-            "googleMapsUrl": "https://maps.google.com/?q=The+Pod+51+Hotel+New+York"
+            "name": "Chrysler Building",
+            "address": "405 Lexington Ave, New York",
+            "lat": 40.7516,
+            "lng": -73.9755,
+            "googleMapsUrl": "https://maps.google.com/?q=Chrysler+Building+New+York"
+          }
+        },
+        {
+          "id": "d3e4",
+          "title": "Katedra św. Patryka",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Neogotycka katedra naprzeciwko Rockefeller Center",
+          "photo": "https://images.unsplash.com/photo-1555109307-f7d9da25c244?w=600",
+          "location": {
+            "name": "St. Patrick's Cathedral",
+            "address": "5th Ave, New York, NY 10022",
+            "lat": 40.7585,
+            "lng": -73.9760,
+            "googleMapsUrl": "https://maps.google.com/?q=St+Patrick's+Cathedral+New+York"
+          }
+        },
+        {
+          "id": "d3e5",
+          "title": "Rockefeller Center",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Kompleks budynków z lodowiskiem i złotym Prometeuszem",
+          "photo": "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?w=600",
+          "location": {
+            "name": "Rockefeller Center",
+            "address": "45 Rockefeller Plaza, New York",
+            "lat": 40.7587,
+            "lng": -73.9787,
+            "googleMapsUrl": "https://maps.google.com/?q=Rockefeller+Center+New+York"
+          }
+        },
+        {
+          "id": "d3e6",
+          "title": "Radio City Music Hall",
+          "category": "entertainment",
+          "isFlexible": true,
+          "description": "Legendarna sala koncertowa — Art Deco od zewnątrz",
+          "location": {
+            "name": "Radio City Music Hall",
+            "address": "1260 6th Ave, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Radio+City+Music+Hall"
+          }
+        },
+        {
+          "id": "d3e7",
+          "title": "MoMA",
+          "category": "museum",
+          "isFlexible": true,
+          "description": "Museum of Modern Art — Starry Night, Campbell's Soup, Picasso i więcej",
+          "photo": "https://images.unsplash.com/photo-1580191947416-62d35a55e71d?w=600",
+          "location": {
+            "name": "MoMA",
+            "address": "11 W 53rd St, New York, NY 10019",
+            "lat": 40.7614,
+            "lng": -73.9776,
+            "googleMapsUrl": "https://maps.google.com/?q=MoMA+New+York"
+          }
+        },
+        {
+          "id": "d3e8",
+          "title": "SUMMIT One Vanderbilt",
+          "category": "sightseeing",
+          "startTime": "19:00",
+          "description": "Taras widokowy z lustrzanymi pokojami — bilety na 19:00, zachód słońca!",
+          "photo": "https://images.unsplash.com/photo-1670586824872-0ce2e0f8306c?w=600",
+          "location": {
+            "name": "SUMMIT One Vanderbilt",
+            "address": "45 E 42nd St, New York, NY 10017",
+            "lat": 40.7531,
+            "lng": -73.9786,
+            "googleMapsUrl": "https://maps.google.com/?q=SUMMIT+One+Vanderbilt"
+          },
+          "notes": "Bilety zarezerwowane na 19:00!"
+        }
+      ],
+      "bonusActivities": [
+        {
+          "id": "d3b1",
+          "title": "Bryant Park",
+          "category": "walk",
+          "description": "Zielony park za biblioteką — ładne miejsce na przerwę",
+          "location": {
+            "name": "Bryant Park",
+            "address": "New York, NY 10018",
+            "googleMapsUrl": "https://maps.google.com/?q=Bryant+Park+New+York"
+          }
+        },
+        {
+          "id": "d3b2",
+          "title": "Top of the Rock",
+          "category": "sightseeing",
+          "description": "Taras widokowy na Rockefeller Center — alternatywa lub dodatek do SUMMIT",
+          "location": {
+            "name": "Top of the Rock",
+            "address": "30 Rockefeller Plaza, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Top+of+the+Rock+New+York"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "label": "Dzień 4 - Central Park i Broadway",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "Club Quarters Hotel",
+        "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
+      },
+      "events": [
+        {
+          "id": "d4e1",
+          "title": "Apple Store 5th Ave / LV Trunk",
+          "category": "shopping",
+          "isFlexible": true,
+          "description": "Szklany sześcian Apple Store i Louis Vuitton przy 5th Avenue",
+          "location": {
+            "name": "Apple Fifth Avenue",
+            "address": "767 5th Ave, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Apple+Store+Fifth+Avenue+New+York"
+          }
+        },
+        {
+          "id": "d4e2",
+          "title": "Central Park",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Wielki spacer po Central Parku — Bethesda Terrace, Strawberry Fields, Sheep Meadow",
+          "photo": "https://images.unsplash.com/photo-1534801022022-6e319a11f249?w=600",
+          "location": {
+            "name": "Central Park",
+            "address": "Central Park, Manhattan",
+            "lat": 40.7829,
+            "lng": -73.9654,
+            "googleMapsUrl": "https://maps.google.com/?q=Central+Park+New+York"
+          }
+        },
+        {
+          "id": "d4e3",
+          "title": "Bethesda Terrace & Fountain",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Najbardziej ikoniczne miejsce w Central Parku",
+          "photo": "https://images.unsplash.com/photo-1588093356596-8e5568033e49?w=600",
+          "location": {
+            "name": "Bethesda Terrace",
+            "address": "Central Park, Manhattan",
+            "lat": 40.7736,
+            "lng": -73.9712,
+            "googleMapsUrl": "https://maps.google.com/?q=Bethesda+Terrace+Central+Park"
+          }
+        },
+        {
+          "id": "d4e4",
+          "title": "Strawberry Fields",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Pomnik Johna Lennona — mozaika 'Imagine'",
+          "location": {
+            "name": "Strawberry Fields",
+            "address": "Central Park West, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Strawberry+Fields+Central+Park"
+          }
+        },
+        {
+          "id": "d4e5",
+          "title": "Sheep Meadow",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Wielka polana do relaksu z widokiem na Manhattan skyline",
+          "location": {
+            "name": "Sheep Meadow",
+            "address": "Central Park, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=Sheep+Meadow+Central+Park"
+          }
+        },
+        {
+          "id": "d4e6",
+          "title": "Central Park Zoo?",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Małe zoo w Central Parku — opcjonalnie, jeśli starczy czasu",
+          "location": {
+            "name": "Central Park Zoo",
+            "address": "64th St & 5th Ave, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Central+Park+Zoo"
+          }
+        },
+        {
+          "id": "d4e7",
+          "title": "Broadway - Lyric Theatre",
+          "category": "entertainment",
+          "startTime": "19:00",
+          "description": "Przedstawienie na Broadwayu w Lyric Theatre!",
+          "photo": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600",
+          "location": {
+            "name": "Lyric Theatre",
+            "address": "214 W 43rd St, New York, NY 10036",
+            "googleMapsUrl": "https://maps.google.com/?q=Lyric+Theatre+Broadway+New+York"
+          },
+          "notes": "Sprawdzić bilety i godzinę!"
+        }
+      ],
+      "bonusActivities": [
+        {
+          "id": "d4b1",
+          "title": "Gapstow Bridge (mostek z Kevina)",
+          "category": "photo-spot",
+          "description": "Mostek znany z filmu 'Kevin sam w Nowym Jorku'",
+          "photo": "https://images.unsplash.com/photo-1534801022022-6e319a11f249?w=600",
+          "location": {
+            "name": "Gapstow Bridge",
+            "address": "Central Park, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=Gapstow+Bridge+Central+Park"
+          }
+        },
+        {
+          "id": "d4b2",
+          "title": "Spacer na The Ramble",
+          "category": "walk",
+          "description": "Dziki, zalesiany zakątek Central Parku",
+          "location": {
+            "name": "The Ramble",
+            "address": "Central Park, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=The+Ramble+Central+Park"
+          }
+        },
+        {
+          "id": "d4b3",
+          "title": "Roosevelt Island Tramway",
+          "category": "sightseeing",
+          "description": "Kolejka linowa nad East River z widokiem na Manhattan",
+          "location": {
+            "name": "Roosevelt Island Tramway",
+            "address": "E 59th St & 2nd Ave, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Roosevelt+Island+Tramway"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "label": "Dzień 5 - Top of the Rock, SoHo i Little Italy",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "The Cloud One Hotel New York-Downtown",
+        "checkIn": "14:00",
+        "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+      },
+      "events": [
+        {
+          "id": "d5e1",
+          "title": "Top of the Rock",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Taras widokowy na 70. piętrze Rockefeller Center — widok na Central Park i Empire State",
+          "photo": "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?w=600",
+          "location": {
+            "name": "Top of the Rock",
+            "address": "30 Rockefeller Plaza, New York, NY 10112",
+            "lat": 40.7593,
+            "lng": -73.9794,
+            "googleMapsUrl": "https://maps.google.com/?q=Top+of+the+Rock+New+York"
+          }
+        },
+        {
+          "id": "d5e2",
+          "title": "Wymeldowanie z Club Quarters",
+          "category": "accommodation",
+          "startTime": "11:00",
+          "description": "Check-out z Club Quarters Hotel",
+          "location": {
+            "name": "Club Quarters Hotel",
+            "googleMapsUrl": "https://maps.google.com/?q=Club+Quarters+Hotel+New+York"
+          }
+        },
+        {
+          "id": "d5e3",
+          "title": "Zameldowanie w Cloud One Downtown",
+          "category": "accommodation",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "description": "Nowy hotel na drugą część pobytu — lokalizacja Downtown",
+          "location": {
+            "name": "The Cloud One Hotel New York-Downtown",
+            "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+          }
+        },
+        {
+          "id": "d5e4",
+          "title": "SoHo",
+          "category": "shopping",
+          "isFlexible": true,
+          "description": "Żeliwna architektura, butiki, galerie sztuki i klimatyczne uliczki",
+          "photo": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600",
+          "location": {
+            "name": "SoHo",
+            "address": "SoHo, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=SoHo+Manhattan+New+York"
+          }
+        },
+        {
+          "id": "d5e5",
+          "title": "Little Italy",
+          "category": "food",
+          "isFlexible": true,
+          "description": "Mulberry Street — włoska kuchnia i klimat starego NYC",
+          "location": {
+            "name": "Little Italy",
+            "address": "Mulberry St, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=Little+Italy+Mulberry+Street+New+York"
+          }
+        },
+        {
+          "id": "d5e6",
+          "title": "Chinatown",
+          "category": "food",
+          "isFlexible": true,
+          "description": "Największe Chinatown w USA — jedzenie, sklepy, Canal Street",
+          "location": {
+            "name": "Chinatown",
+            "address": "Chinatown, Manhattan",
+            "googleMapsUrl": "https://maps.google.com/?q=Chinatown+Manhattan+New+York"
+          }
+        }
+      ],
+      "bonusActivities": [
+        {
+          "id": "d5b1",
+          "title": "Bryant Park",
+          "category": "walk",
+          "description": "Jeśli nie odwiedziliśmy w dniu 3",
+          "location": {
+            "name": "Bryant Park",
+            "googleMapsUrl": "https://maps.google.com/?q=Bryant+Park+New+York"
+          }
+        },
+        {
+          "id": "d5b2",
+          "title": "Ghostbusters HQ",
+          "category": "photo-spot",
+          "description": "Jeśli nie odwiedziliśmy w dniu 2",
+          "location": {
+            "name": "Hook & Ladder 8",
+            "address": "14 N Moore St, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Hook+and+Ladder+8+New+York"
+          }
+        },
+        {
+          "id": "d5b3",
+          "title": "Washington Square Park",
+          "category": "walk",
+          "description": "Jeśli nie odwiedziliśmy w dniu 2",
+          "location": {
+            "name": "Washington Square Park",
+            "googleMapsUrl": "https://maps.google.com/?q=Washington+Square+Park+New+York"
+          }
+        }
+      ],
+      "notes": "Zmiana hotelu! Wymeldowanie 11:00 z Club Quarters, zameldowanie 14:00-15:00 w Cloud One."
+    },
+    {
+      "date": "2026-05-05",
+      "label": "Dzień 6 - Lower Manhattan i Statua Wolności",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "The Cloud One Hotel New York-Downtown",
+        "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+      },
+      "events": [
+        {
+          "id": "d6e1",
+          "title": "Ground Zero i 9/11 Memorial",
+          "category": "museum",
+          "isFlexible": true,
+          "description": "Baseny memorializujące ofiary 9/11 i muzeum podziemne",
+          "photo": "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600",
+          "location": {
+            "name": "9/11 Memorial & Museum",
+            "address": "180 Greenwich St, New York, NY 10007",
+            "lat": 40.7115,
+            "lng": -74.0134,
+            "googleMapsUrl": "https://maps.google.com/?q=9/11+Memorial+Museum+New+York"
+          }
+        },
+        {
+          "id": "d6e2",
+          "title": "Oculus",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Futurystyczny dworzec Calatravy — imponująca architektura",
+          "photo": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600",
+          "location": {
+            "name": "Oculus",
+            "address": "33 Vesey St, New York, NY 10007",
+            "googleMapsUrl": "https://maps.google.com/?q=Oculus+World+Trade+Center"
+          }
+        },
+        {
+          "id": "d6e3",
+          "title": "Wall Street + Charging Bull",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Financial District — byk z Wall Street, NYSE, Federal Hall",
+          "photo": "https://images.unsplash.com/photo-1534488972407-834d59099b5f?w=600",
+          "location": {
+            "name": "Charging Bull",
+            "address": "Broadway, New York, NY 10004",
+            "lat": 40.7056,
+            "lng": -74.0134,
+            "googleMapsUrl": "https://maps.google.com/?q=Charging+Bull+Wall+Street"
           }
         },
         {
           "id": "d6e4",
-          "title": "Last NYC Walk - Midtown",
-          "category": "walk",
-          "startTime": "11:00",
-          "endTime": "12:30",
+          "title": "Rejs do Statuy Wolności",
+          "category": "sightseeing",
           "isFlexible": true,
-          "description": "Final stroll - St. Patrick's Cathedral, Rockefeller Center area",
+          "description": "Prom na Liberty Island — widok na Manhattan skyline z wody",
+          "photo": "https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?w=600",
           "location": {
-            "name": "Midtown Manhattan",
-            "address": "Midtown, Manhattan",
-            "googleMapsUrl": "https://maps.google.com/?q=Midtown+Manhattan"
-          }
-        },
-        {
-          "id": "d6e5",
-          "title": "Farewell Lunch",
-          "category": "food",
-          "startTime": "12:30",
-          "endTime": "13:30",
-          "isFlexible": true,
-          "description": "Last meal in NYC - dealer's choice!",
-          "cost": { "amount": 40, "currency": "USD" }
-        },
-        {
-          "id": "d6e6",
-          "title": "Subway to JFK",
-          "category": "transport",
-          "startTime": "14:00",
-          "endTime": "15:30",
-          "description": "E train to Jamaica Station, then AirTrain to JFK Terminal 1",
-          "location": {
-            "name": "JFK International Airport",
-            "address": "Queens, NY 11430",
-            "googleMapsUrl": "https://maps.google.com/?q=JFK+Airport"
+            "name": "Statue of Liberty",
+            "address": "Liberty Island, New York",
+            "lat": 40.6892,
+            "lng": -74.0445,
+            "googleMapsUrl": "https://maps.google.com/?q=Statue+of+Liberty"
           },
-          "cost": { "amount": 10.75, "currency": "USD" }
-        },
-        {
-          "id": "d6e7",
-          "title": "Flight Back to Warsaw",
-          "category": "transport",
-          "startTime": "18:00",
-          "description": "LOT Polish Airlines LO26 to Warsaw. Arrives next day.",
-          "location": {
-            "name": "JFK International Airport - Terminal 1",
-            "address": "Queens, NY 11430",
-            "googleMapsUrl": "https://maps.google.com/?q=JFK+Airport+Terminal+1"
-          },
-          "notes": "Check-in opens 3h before departure. Arrive by 15:30."
+          "notes": "Sprawdzić bilety na prom z Battery Park!"
         }
       ],
       "bonusActivities": [
         {
           "id": "d6b1",
-          "title": "Last-minute Souvenir Shopping",
-          "category": "shopping",
-          "description": "Pick up any remaining souvenirs near the hotel"
+          "title": "Trinity Church",
+          "category": "sightseeing",
+          "description": "Historyczny kościół przy Wall Street",
+          "location": {
+            "name": "Trinity Church",
+            "address": "75 Broadway, New York",
+            "googleMapsUrl": "https://maps.google.com/?q=Trinity+Church+Wall+Street"
+          }
+        },
+        {
+          "id": "d6b2",
+          "title": "South Street Seaport",
+          "category": "sightseeing",
+          "description": "Historyczna dzielnica portowa z widokiem na Brooklyn Bridge",
+          "location": {
+            "name": "South Street Seaport",
+            "googleMapsUrl": "https://maps.google.com/?q=South+Street+Seaport+New+York"
+          }
+        },
+        {
+          "id": "d6b3",
+          "title": "Black Rabbit Building",
+          "category": "sightseeing",
+          "location": {
+            "name": "Black Rabbit Building",
+            "googleMapsUrl": "https://maps.google.com/?q=Black+Rabbit+Building+New+York"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "label": "Dzień 7 - Brooklyn",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "The Cloud One Hotel New York-Downtown",
+        "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+      },
+      "events": [
+        {
+          "id": "d7e1",
+          "title": "Brooklyn Bridge",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Przejście pieszo przez ikoniczny most — najlepiej rano",
+          "photo": "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=600",
+          "location": {
+            "name": "Brooklyn Bridge",
+            "address": "Brooklyn Bridge, New York",
+            "lat": 40.7061,
+            "lng": -73.9969,
+            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Bridge+New+York"
+          }
+        },
+        {
+          "id": "d7e2",
+          "title": "DUMBO",
+          "category": "sightseeing",
+          "isFlexible": true,
+          "description": "Słynny widok na Manhattan Bridge z Washington Street",
+          "photo": "https://images.unsplash.com/photo-1555424681-b0ecf4fe19a5?w=600",
+          "location": {
+            "name": "DUMBO",
+            "address": "DUMBO, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=DUMBO+Brooklyn+Manhattan+Bridge+View"
+          }
+        },
+        {
+          "id": "d7e3",
+          "title": "Pebble Beach",
+          "category": "photo-spot",
+          "isFlexible": true,
+          "description": "Kamienista plaża z widokiem na Manhattan skyline i Brooklyn Bridge",
+          "location": {
+            "name": "Pebble Beach",
+            "address": "Plymouth St, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=Pebble+Beach+DUMBO+Brooklyn"
+          }
+        },
+        {
+          "id": "d7e4",
+          "title": "Brooklyn Bridge Park",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Park wzdłuż nabrzeża z widokami na Manhattan",
+          "photo": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600",
+          "location": {
+            "name": "Brooklyn Bridge Park",
+            "address": "334 Furman St, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=Brooklyn+Bridge+Park"
+          }
+        },
+        {
+          "id": "d7e5",
+          "title": "Time Out Market",
+          "category": "food",
+          "isFlexible": true,
+          "description": "Food hall z najlepszymi restauracjami NYC pod jednym dachem",
+          "location": {
+            "name": "Time Out Market New York",
+            "address": "55 Water St, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=Time+Out+Market+Brooklyn"
+          }
+        },
+        {
+          "id": "d7e6",
+          "title": "Domino Park",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Park na nabrzeżu w Williamsburgu — widok na Manhattan",
+          "location": {
+            "name": "Domino Park",
+            "address": "15 River St, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=Domino+Park+Brooklyn"
+          }
+        },
+        {
+          "id": "d7e7",
+          "title": "Williamsburg",
+          "category": "walk",
+          "isFlexible": true,
+          "description": "Hipsterska dzielnica — street art, vintage shopy, knajpki",
+          "photo": "https://images.unsplash.com/photo-1569880153113-76e33fc52b5f?w=600",
+          "location": {
+            "name": "Williamsburg",
+            "address": "Williamsburg, Brooklyn",
+            "googleMapsUrl": "https://maps.google.com/?q=Williamsburg+Brooklyn"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "label": "Dzień 8 - Wolny dzień",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "The Cloud One Hotel New York-Downtown",
+        "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+      },
+      "events": [],
+      "bonusActivities": [
+        {
+          "id": "d8b1",
+          "title": "Governors Island",
+          "category": "sightseeing",
+          "description": "Wyspa z widokami na Statuę Wolności i Manhattan — darmowy prom",
+          "location": {
+            "name": "Governors Island",
+            "googleMapsUrl": "https://maps.google.com/?q=Governors+Island+New+York"
+          }
         }
       ],
-      "notes": "Flight at 18:00 - need to leave for JFK by 14:00 latest!"
+      "notes": "Luz! Dzień na spontaniczne plany, powroty do ulubionych miejsc, albo Governors Island."
+    },
+    {
+      "date": "2026-05-08",
+      "label": "Dzień 9 - Ostatni dzień i wylot",
+      "timezone": "America/New_York",
+      "timezoneOffset": "UTC-4",
+      "accommodation": {
+        "name": "The Cloud One Hotel New York-Downtown",
+        "checkOut": "11:00",
+        "googleMapsUrl": "https://maps.google.com/?q=The+Cloud+One+Hotel+New+York+Downtown"
+      },
+      "events": [
+        {
+          "id": "d9e1",
+          "title": "Wylot z Nowego Jorku",
+          "category": "transport",
+          "startTime": "21:50",
+          "description": "Lot powrotny do Polski. Czas nowojorski.",
+          "location": {
+            "name": "JFK International Airport",
+            "address": "Queens, NY 11430",
+            "googleMapsUrl": "https://maps.google.com/?q=JFK+Airport"
+          },
+          "notes": "Na lotnisku być ~19:00. Wymeldowanie do 11:00 — bagaż w przechowalni hotelowej."
+        }
+      ],
+      "notes": "Wylot 21:50. Cały dzień jeszcze w NYC! Wymeldowanie do 11:00, bagaż zostawić w hotelu."
+    },
+    {
+      "date": "2026-05-09",
+      "label": "Dzień 10 - Powrót do domu",
+      "timezone": "Europe/Warsaw",
+      "timezoneOffset": "UTC+2",
+      "events": [
+        {
+          "id": "d10e1",
+          "title": "Przylot do Polski",
+          "category": "transport",
+          "startTime": "14:20",
+          "description": "Lądowanie w Polsce. Czas polski.",
+          "notes": "14:20 czasu polskiego"
+        }
+      ]
+    }
+  ],
+  "globalBonusActivities": [
+    {
+      "id": "gb1",
+      "title": "Flatiron Building",
+      "category": "sightseeing",
+      "description": "Ikoniczny trójkątny budynek — gdzieś przy okazji"
+    },
+    {
+      "id": "gb2",
+      "title": "Harry Potter Store",
+      "category": "shopping",
+      "description": "Największy sklep HP na świecie — 935 Broadway"
+    },
+    {
+      "id": "gb3",
+      "title": "Madison Square Garden",
+      "category": "sightseeing",
+      "description": "Legendarna arena — zobaczyć z zewnątrz"
+    },
+    {
+      "id": "gb4",
+      "title": "American Museum of Natural History",
+      "category": "museum",
+      "description": "Muzeum znane z 'Noc w muzeum' — przy Central Parku"
+    },
+    {
+      "id": "gb5",
+      "title": "The Metropolitan Museum of Art",
+      "category": "museum",
+      "description": "Jedno z największych muzeów sztuki na świecie"
     }
   ]
 }

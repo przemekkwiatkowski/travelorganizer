@@ -42,6 +42,10 @@ export const t = {
     addEvent: "Dodaj wydarzenie",
     totalCost: "Łączny koszt",
   },
+  global: {
+    bonusTitle: "Przy okazji / jak będzie czas",
+    bonusSubtitle: "Miejsca do odwiedzenia gdzieś w trakcie podróży",
+  },
   categories: {
     sightseeing: "Zwiedzanie",
     museum: "Muzeum",

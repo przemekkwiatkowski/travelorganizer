@@ -15,9 +15,9 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TravelOrganizer - NYC Trip Planner",
+  title: "TravelOrganizer - Plan podróży do Nowego Jorku",
   description:
-    "Interactive travel itinerary viewer with timeline and day views. Plan your perfect trip.",
+    "Interaktywny planer podróży z widokiem osi czasu i tablicy. Zaplanuj idealny wyjazd.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pl"
       className={`${outfit.variable} ${workSans.variable} h-full`}
       suppressHydrationWarning
     >

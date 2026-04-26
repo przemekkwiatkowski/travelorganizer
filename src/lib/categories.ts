@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Category } from "@/types/trip";
 import type { LucideIcon } from "lucide-react";
+import { t } from "./i18n";
 
 interface CategoryConfig {
   label: string;
@@ -23,7 +24,7 @@ interface CategoryConfig {
 
 export const categoryConfig: Record<Category, CategoryConfig> = {
   sightseeing: {
-    label: "Sightseeing",
+    label: t.categories.sightseeing,
     icon: Landmark,
     color: "#3b82f6",
     bgLight: "bg-blue-50",
@@ -31,7 +32,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-blue-600 dark:text-blue-400",
   },
   museum: {
-    label: "Museum",
+    label: t.categories.museum,
     icon: Palette,
     color: "#8b5cf6",
     bgLight: "bg-violet-50",
@@ -39,7 +40,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-violet-600 dark:text-violet-400",
   },
   food: {
-    label: "Food & Drink",
+    label: t.categories.food,
     icon: UtensilsCrossed,
     color: "#f97316",
     bgLight: "bg-orange-50",
@@ -47,7 +48,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-orange-600 dark:text-orange-400",
   },
   transport: {
-    label: "Transport",
+    label: t.categories.transport,
     icon: Train,
     color: "#6b7280",
     bgLight: "bg-gray-50",
@@ -55,7 +56,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-gray-600 dark:text-gray-400",
   },
   accommodation: {
-    label: "Accommodation",
+    label: t.categories.accommodation,
     icon: Hotel,
     color: "#14b8a6",
     bgLight: "bg-teal-50",
@@ -63,7 +64,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-teal-600 dark:text-teal-400",
   },
   shopping: {
-    label: "Shopping",
+    label: t.categories.shopping,
     icon: ShoppingBag,
     color: "#ec4899",
     bgLight: "bg-pink-50",
@@ -71,7 +72,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-pink-600 dark:text-pink-400",
   },
   entertainment: {
-    label: "Entertainment",
+    label: t.categories.entertainment,
     icon: Music,
     color: "#eab308",
     bgLight: "bg-yellow-50",
@@ -79,7 +80,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-yellow-600 dark:text-yellow-400",
   },
   walk: {
-    label: "Walk",
+    label: t.categories.walk,
     icon: Footprints,
     color: "#22c55e",
     bgLight: "bg-green-50",
@@ -87,7 +88,7 @@ export const categoryConfig: Record<Category, CategoryConfig> = {
     textColor: "text-green-600 dark:text-green-400",
   },
   "photo-spot": {
-    label: "Photo Spot",
+    label: t.categories["photo-spot"],
     icon: Camera,
     color: "#e11d48",
     bgLight: "bg-rose-50",

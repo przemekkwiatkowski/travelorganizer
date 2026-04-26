@@ -15,6 +15,7 @@ import type { TripDay } from "@/types/trip";
 import { categoryConfig } from "@/lib/categories";
 import { EventCard } from "./EventCard";
 import { cn, formatDate, formatDateLong, calculateDayCost } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 
 interface VerticalTimelineProps {
   day: TripDay;
@@ -29,7 +30,7 @@ export function VerticalTimeline({ day, dayIndex }: VerticalTimelineProps) {
     <div className="mx-auto max-w-2xl">
       <div className="mb-6 text-center">
         <span className="text-sm font-semibold uppercase tracking-wider text-blue-500 dark:text-blue-400">
-          Day {dayIndex + 1}
+          {t.day.day} {dayIndex + 1}
         </span>
         <h2 className="mt-1 text-2xl font-bold text-gray-900 dark:text-gray-100">
           {day.label.replace(/^Day \d+ - /, "")}
@@ -42,7 +43,7 @@ export function VerticalTimeline({ day, dayIndex }: VerticalTimelineProps) {
         <div className="mt-2 flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1">
             <Clock className="h-3.5 w-3.5" />
-            {day.events.length} events
+            {day.events.length} {t.day.events}
           </span>
           {dayCost && (
             <span className="flex items-center gap-1">
@@ -68,9 +69,9 @@ export function VerticalTimeline({ day, dayIndex }: VerticalTimelineProps) {
             {(day.accommodation.checkIn || day.accommodation.checkOut) && (
               <p className="text-xs text-teal-600/60 dark:text-teal-400/60 mt-0.5">
                 {day.accommodation.checkIn &&
-                  `Check-in: ${day.accommodation.checkIn}`}
+                  `${t.day.checkIn}: ${day.accommodation.checkIn}`}
                 {day.accommodation.checkOut &&
-                  ` | Check-out: ${day.accommodation.checkOut}`}
+                  ` | ${t.day.checkOut}: ${day.accommodation.checkOut}`}
               </p>
             )}
           </div>
@@ -121,7 +122,7 @@ export function VerticalTimeline({ day, dayIndex }: VerticalTimelineProps) {
             className="flex w-full items-center gap-2 text-base font-semibold text-amber-700 dark:text-amber-400 cursor-pointer"
           >
             <Star className="h-5 w-5" />
-            Bonus Activities ({day.bonusActivities.length})
+            {t.day.bonusActivities} ({day.bonusActivities.length})
             {showBonus ? (
               <ChevronUp className="ml-auto h-5 w-5" />
             ) : (
@@ -166,7 +167,7 @@ export function VerticalTimeline({ day, dayIndex }: VerticalTimelineProps) {
                           className="mt-1 flex items-center gap-1 text-xs text-blue-500 hover:text-blue-600 cursor-pointer"
                         >
                           <MapPin className="h-3 w-3" />
-                          View on map
+                          {t.map.viewOnMap}
                         </a>
                       )}
                     </div>

@@ -13,6 +13,7 @@ import type { TripDay } from "@/types/trip";
 import { categoryConfig } from "@/lib/categories";
 import { EventCard } from "./EventCard";
 import { cn, formatDate, calculateDayCost } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 
 interface DayColumnProps {
   day: TripDay;
@@ -46,7 +47,7 @@ export function DayColumn({ day, dayIndex, isActive, onSelect }: DayColumnProps)
       >
         <div className="flex items-center justify-between">
           <span className="text-xs font-semibold uppercase tracking-wider text-blue-500 dark:text-blue-400">
-            Day {dayIndex + 1}
+            {t.day.day} {dayIndex + 1}
           </span>
           <span className="text-xs text-gray-500 dark:text-gray-400">
             {day.timezoneOffset}
@@ -59,7 +60,7 @@ export function DayColumn({ day, dayIndex, isActive, onSelect }: DayColumnProps)
           {formatDate(day.date)}
         </p>
         <div className="mt-2 flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
-          <span>{day.events.length} events</span>
+          <span>{day.events.length} {t.day.events}</span>
           {dayCost && (
             <span className="flex items-center gap-0.5">
               <DollarSign className="h-3 w-3" />~{dayCost.amount}{" "}
@@ -79,9 +80,9 @@ export function DayColumn({ day, dayIndex, isActive, onSelect }: DayColumnProps)
             {(day.accommodation.checkIn || day.accommodation.checkOut) && (
               <p className="text-[11px] text-teal-600/70 dark:text-teal-400/70">
                 {day.accommodation.checkIn &&
-                  `Check-in: ${day.accommodation.checkIn}`}
+                  `${t.day.checkIn}: ${day.accommodation.checkIn}`}
                 {day.accommodation.checkOut &&
-                  ` Check-out: ${day.accommodation.checkOut}`}
+                  ` ${t.day.checkOut}: ${day.accommodation.checkOut}`}
               </p>
             )}
           </div>
@@ -111,8 +112,7 @@ export function DayColumn({ day, dayIndex, isActive, onSelect }: DayColumnProps)
             className="flex w-full items-center gap-2 text-sm font-medium text-amber-600 dark:text-amber-400 cursor-pointer hover:text-amber-700"
           >
             <Star className="h-4 w-4" />
-            {day.bonusActivities.length} Bonus{" "}
-            {day.bonusActivities.length === 1 ? "Activity" : "Activities"}
+            {day.bonusActivities.length} {t.day.bonusActivities}
             {showBonus ? (
               <ChevronUp className="ml-auto h-4 w-4" />
             ) : (

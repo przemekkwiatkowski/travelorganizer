@@ -13,6 +13,7 @@ import {
 import type { TripEvent } from "@/types/trip";
 import { categoryConfig } from "@/lib/categories";
 import { cn, formatTime } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 import { MapModal } from "./MapModal";
 
 interface EventCardProps {
@@ -40,7 +41,7 @@ export function EventCard({ event, compact }: EventCardProps) {
         {event.isFlexible && (
           <div className="absolute -top-2 right-3 flex items-center gap-1 rounded-full bg-amber-100 dark:bg-amber-900/60 px-2 py-0.5 text-[11px] font-medium text-amber-700 dark:text-amber-300">
             <Sparkles className="h-3 w-3" />
-            Flexible
+            {t.day.flexible}
           </div>
         )}
 
@@ -121,11 +122,11 @@ export function EventCard({ event, compact }: EventCardProps) {
               >
                 {expanded ? (
                   <>
-                    Less <ChevronUp className="h-3 w-3" />
+                    {t.event.less} <ChevronUp className="h-3 w-3" />
                   </>
                 ) : (
                   <>
-                    More <ChevronDown className="h-3 w-3" />
+                    {t.event.more} <ChevronDown className="h-3 w-3" />
                   </>
                 )}
               </button>

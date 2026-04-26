@@ -3,12 +3,15 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import type { TripData } from "@/types/trip";
 import { TripHeader } from "./TripHeader";
-import { ViewToggle } from "./ViewToggle";
+import { ViewToggle, type ViewMode, type TimelineSubMode } from "./ViewToggle";
 import { CategoryLegend } from "./CategoryLegend";
 import { HorizontalTimeline } from "./HorizontalTimeline";
+import { TimelineDetailed } from "./TimelineDetailed";
 import { VerticalTimeline } from "./VerticalTimeline";
+import { BoardView } from "./BoardView";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 
 interface TripAppProps {
   initialData: TripData;
@@ -16,9 +19,9 @@ interface TripAppProps {
 
 export function TripApp({ initialData }: TripAppProps) {
   const [data, setData] = useState<TripData>(initialData);
-  const [viewMode, setViewMode] = useState<"horizontal" | "vertical">(
-    "horizontal"
-  );
+  const [viewMode, setViewMode] = useState<ViewMode>("timeline");
+  const [timelineSubMode, setTimelineSubMode] =
+    useState<TimelineSubMode>("detailed");
   const [activeDay, setActiveDay] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -68,7 +71,7 @@ export function TripApp({ initialData }: TripAppProps) {
           setActiveDay(0);
         }
       } catch {
-        alert("Invalid JSON file");
+        alert("Nieprawidłowy plik JSON");
       }
     };
     reader.readAsText(file);
@@ -96,70 +99,40 @@ export function TripApp({ initialData }: TripAppProps) {
 
       <main className="px-4 py-6 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <ViewToggle mode={viewMode} onChange={setViewMode} />
+          <ViewToggle
+            mode={viewMode}
+            onChange={setViewMode}
+            timelineSubMode={timelineSubMode}
+            onTimelineSubModeChange={setTimelineSubMode}
+          />
           <CategoryLegend />
         </div>
 
-        {viewMode === "horizontal" ? (
+        {viewMode === "timeline" && timelineSubMode === "detailed" && (
+          <TimelineDetailed
+            days={data.days}
+            activeDay={activeDay}
+            onDaySelect={setActiveDay}
+          />
+        )}
+
+        {viewMode === "timeline" && timelineSubMode === "compact" && (
           <HorizontalTimeline
             days={data.days}
             activeDay={activeDay}
             onDaySelect={setActiveDay}
           />
-        ) : (
-          <div>
-            <div className="mb-4 flex items-center justify-center gap-3">
-              <button
-                onClick={() => setActiveDay(Math.max(0, activeDay - 1))}
-                disabled={activeDay === 0}
-                className="rounded-lg border border-gray-200 dark:border-gray-700 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-30 cursor-pointer transition-colors"
-                aria-label="Previous day"
-              >
-                <ChevronLeft className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-              </button>
-
-              <div className="flex gap-1.5">
-                {data.days.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveDay(i)}
-                    className={cn(
-                      "h-2.5 rounded-full transition-all cursor-pointer",
-                      activeDay === i
-                        ? "w-8 bg-blue-500"
-                        : "w-2.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400"
-                    )}
-                    aria-label={`Go to day ${i + 1}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={() =>
-                  setActiveDay(Math.min(data.days.length - 1, activeDay + 1))
-                }
-                disabled={activeDay === data.days.length - 1}
-                className="rounded-lg border border-gray-200 dark:border-gray-700 p-2 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-30 cursor-pointer transition-colors"
-                aria-label="Next day"
-              >
-                <ChevronRight className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-              </button>
-            </div>
-
-            <VerticalTimeline
-              day={data.days[activeDay]}
-              dayIndex={activeDay}
-            />
-          </div>
         )}
+
+        {viewMode === "board" && <BoardView days={data.days} />}
       </main>
 
       <footer className="border-t border-gray-200 dark:border-gray-800 px-4 py-6 text-center text-sm text-gray-400 dark:text-gray-500">
-        TravelOrganizer &middot; Edit{" "}
+        {t.app.name} &middot; {t.app.editHint}{" "}
         <code className="rounded bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 text-xs">
           src/data/trip.json
         </code>{" "}
-        to customize your trip
+        {t.app.editHintSuffix}
       </footer>
     </div>
   );

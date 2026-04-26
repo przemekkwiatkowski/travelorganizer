@@ -1,0 +1,56 @@
+export const t = {
+  app: {
+    name: "TravelOrganizer",
+    editHint: "Edytuj",
+    editHintSuffix: "aby dostosować swoją podróż",
+  },
+  header: {
+    import: "Importuj",
+    export: "Eksportuj",
+    days: "dni",
+    fromHome: "od domu",
+  },
+  views: {
+    timeline: "Oś czasu",
+    timelineDetailed: "Szczegółowy",
+    timelineCompact: "Kompaktowy",
+    board: "Tablica",
+  },
+  day: {
+    day: "Dzień",
+    events: "wydarzeń",
+    bonusActivities: "Dodatkowe aktywności",
+    notes: "Notatki",
+    flexible: "Elastyczne",
+    checkIn: "Zameldowanie",
+    checkOut: "Wymeldowanie",
+  },
+  event: {
+    more: "Więcej",
+    less: "Mniej",
+  },
+  map: {
+    openInGoogleMaps: "Otwórz w Google Maps",
+    getDirections: "Nawiguj",
+    closeMap: "Zamknij mapę",
+    viewOnMap: "Zobacz na mapie",
+  },
+  board: {
+    title: "Planowanie podróży",
+    subtitle: "Przeciągaj wydarzenia między dniami, aby zmienić plan",
+    emptyDay: "Brak wydarzeń",
+    addEvent: "Dodaj wydarzenie",
+    totalCost: "Łączny koszt",
+  },
+  categories: {
+    sightseeing: "Zwiedzanie",
+    museum: "Muzeum",
+    food: "Jedzenie",
+    transport: "Transport",
+    accommodation: "Nocleg",
+    shopping: "Zakupy",
+    entertainment: "Rozrywka",
+    walk: "Spacer",
+    "photo-spot": "Fotka",
+  },
+} as const;

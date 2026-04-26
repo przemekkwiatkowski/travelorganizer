@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { TripDay } from "@/types/trip";
 import { DayColumn } from "./DayColumn";
 import { cn } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 
 interface HorizontalTimelineProps {
   days: TripDay[];
@@ -60,7 +61,7 @@ export function HorizontalTimeline({
         <button
           onClick={() => scroll("left")}
           className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 dark:bg-gray-800/90 p-2 shadow-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-white dark:hover:bg-gray-700 transition-colors backdrop-blur-sm"
-          aria-label="Scroll left"
+          aria-label="Przewiń w lewo"
         >
           <ChevronLeft className="h-5 w-5 text-gray-700 dark:text-gray-300" />
         </button>
@@ -69,7 +70,7 @@ export function HorizontalTimeline({
         <button
           onClick={() => scroll("right")}
           className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 dark:bg-gray-800/90 p-2 shadow-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:bg-white dark:hover:bg-gray-700 transition-colors backdrop-blur-sm"
-          aria-label="Scroll right"
+          aria-label="Przewiń w prawo"
         >
           <ChevronRight className="h-5 w-5 text-gray-700 dark:text-gray-300" />
         </button>
@@ -87,7 +88,7 @@ export function HorizontalTimeline({
                 : "bg-gray-100 dark:bg-gray-700/60 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
             )}
           >
-            Day {i + 1}
+            {t.day.day} {i + 1}
           </button>
         ))}
       </div>

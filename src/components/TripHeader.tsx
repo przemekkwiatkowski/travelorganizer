@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import type { TripData } from "@/types/trip";
 import { formatDate, getTimezoneShift } from "@/lib/utils";
+import { t } from "@/lib/i18n";
 
 interface TripHeaderProps {
   trip: TripData["trip"];
@@ -53,7 +54,7 @@ export function TripHeader({
               <Plane className="h-5 w-5 text-white" />
             </div>
             <span className="text-sm font-medium text-white/80">
-              TravelOrganizer
+              {t.app.name}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -62,19 +63,19 @@ export function TripHeader({
               className="flex items-center gap-1.5 rounded-lg bg-white/15 backdrop-blur-md px-3 py-1.5 text-xs font-medium text-white hover:bg-white/25 transition-colors cursor-pointer"
             >
               <Upload className="h-3.5 w-3.5" />
-              Import
+              {t.header.import}
             </button>
             <button
               onClick={onExport}
               className="flex items-center gap-1.5 rounded-lg bg-white/15 backdrop-blur-md px-3 py-1.5 text-xs font-medium text-white hover:bg-white/25 transition-colors cursor-pointer"
             >
               <Download className="h-3.5 w-3.5" />
-              Export
+              {t.header.export}
             </button>
             <button
               onClick={onToggleDark}
               className="rounded-lg bg-white/15 backdrop-blur-md p-2 text-white hover:bg-white/25 transition-colors cursor-pointer"
-              aria-label="Toggle theme"
+              aria-label="Przełącz motyw"
             >
               {darkMode ? (
                 <Sun className="h-4 w-4" />
@@ -106,9 +107,9 @@ export function TripHeader({
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="h-4 w-4" />
-              {totalDays} days
+              {totalDays} {t.header.days}
               <span className="rounded-full bg-white/20 px-2 py-0.5 text-xs">
-                {tzShift} from home
+                {tzShift} {t.header.fromHome}
               </span>
             </span>
             {trip.travelers && trip.travelers.length > 0 && (

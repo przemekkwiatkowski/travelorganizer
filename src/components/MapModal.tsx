@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { X, Navigation, ExternalLink } from "lucide-react";
+import { t } from "@/lib/i18n";
 
 interface MapModalProps {
   location: {
@@ -64,7 +65,7 @@ export function MapModal({ location, title, onClose }: MapModalProps) {
           <button
             onClick={onClose}
             className="rounded-lg p-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-            aria-label="Close map"
+            aria-label={t.map.closeMap}
           >
             <X className="h-5 w-5 text-gray-500" />
           </button>
@@ -77,7 +78,7 @@ export function MapModal({ location, title, onClose }: MapModalProps) {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title={`Map of ${location.name}`}
+            title={`Mapa: ${location.name}`}
           />
         </div>
 
@@ -89,7 +90,7 @@ export function MapModal({ location, title, onClose }: MapModalProps) {
             className="flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 transition-colors cursor-pointer"
           >
             <Navigation className="h-4 w-4" />
-            Open in Google Maps
+            {t.map.openInGoogleMaps}
           </a>
           <a
             href={mapsUrl}
@@ -98,7 +99,7 @@ export function MapModal({ location, title, onClose }: MapModalProps) {
             className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer"
           >
             <ExternalLink className="h-4 w-4" />
-            Get Directions
+            {t.map.getDirections}
           </a>
         </div>
       </div>

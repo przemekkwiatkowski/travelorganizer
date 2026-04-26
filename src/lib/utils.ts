@@ -4,7 +4,7 @@ export function formatTime(time: string): string {
 
 export function formatDate(dateStr: string): string {
   const date = new Date(dateStr + "T00:00:00");
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("pl-PL", {
     weekday: "short",
     month: "short",
     day: "numeric",
@@ -13,7 +13,7 @@ export function formatDate(dateStr: string): string {
 
 export function formatDateLong(dateStr: string): string {
   const date = new Date(dateStr + "T00:00:00");
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("pl-PL", {
     weekday: "long",
     month: "long",
     day: "numeric",
